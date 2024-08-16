@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg--black--900: #1c1b28;
+    /* Fondo oscuro */
+    --bg--black--100: #2a293b;
+    /* Fondo más oscuro */
+    --bg--black--50: #34324a;
+    /* Fondo aún más oscuro */
+    --text-black-900: #e2e2ff;
+    /* Texto claro */
+    --text-black-700: #bdbde8;
+    /* Texto menos claro */
+}
