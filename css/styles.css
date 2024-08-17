@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 :root {
@@ -21,11 +22,105 @@
     --skin--color-red:#e02522e1;
 }
 
-
-
 /* Menu */
 
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.content {
+    min-height: 72.5px;
+    background: var(--bg--black--50);
+}
+
+.menu {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 25px;
+    color: var(--text-black-900);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: var(--text-black-900);
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover,
+.menu .navbar ul li a:active {
+    color: var(--skin--color-red); /* Cambiar a color de hover */
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+     
+}
+
+@media (max-width:991px) {
+   
+    .content {
+        min-height: 70px;
+    }
+
+    .menu {
+        top: 0;
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg--black--900);
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    
+    #menu:checked ~ .navbar {
+        margin-left: 200px;
+        z-index: 1000;
+        display: initial;
+    }
+}
 
 /* home */
 
