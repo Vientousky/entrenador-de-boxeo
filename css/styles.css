@@ -9,18 +9,14 @@
 }
 
 :root {
-    --bg--black--900: #1c1b28;
-    /* Fondo oscuro */
-    --bg--black--100: #2a293b;
-    /* Fondo más oscuro */
-    --bg--black--50: #34324a;
-    /* Fondo aún más oscuro */
-    --text-black-900: #e2e2ff;
-    /* Texto claro */
-    --text-black-700: #bdbde8;
-    /* Texto menos claro */
-    --skin--color-red:#e02522e1;
+    --bg--black--900: #18171f; /* Fondo oscuro */
+    --bg--black--100: #23222e; /* Fondo más oscuro */
+    --bg--black--50: #2f2d3a;  /* Fondo aún más oscuro */
+    --text-black-900: #f0f0ff;  /* Texto claro */
+    --text-black-700: #ccccee;  /* Texto menos claro */
+    --skin--color-red: #d62326; /* Rojo con un tono más intenso */
 }
+
 
 /* Menu */
 
@@ -30,8 +26,9 @@
 }
 
 .content {
+    font-family: "Comfortaa", sans-serif;
     min-height: 72.5px;
-    background: var(--bg--black--50);
+    background: var(--bg--black--900);
 }
 
 .menu {
@@ -92,14 +89,11 @@
     .menu {
         top: 0;
         padding: 20px;
+        transition: max-height 0.5s ease-out;
     }
 
     .menu label {
         display: initial;
-    }
-
-    .menu .navbar {
-        transition: all 0.3s ease-in-out;
     }
 
     .menu .navbar {
@@ -108,17 +102,23 @@
         left: 0;
         right: 0;
         background: var(--bg--black--900);
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
     }
 
     .menu .navbar ul li {
-        width: 100%;
+        text-align: center;
+        width: 99%;
     }
     
     #menu:checked ~ .navbar {
-        margin-left: 200px;
-        z-index: 1000;
-        display: initial;
+        z-index: 2;
+        max-height: 500px; /* Ajusta según la altura del contenido */
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -190,4 +190,46 @@
     color: var(--bg--black--50);
 }
 
-/* continuara */
+/* nosotros */
+
+.Nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg--black--900);
+}
+
+.wrapper {
+    margin: 100px auto;
+    width: 70%;
+}
+
+img {
+    max-width: 320px;
+    float: left;
+    cursor: pointer;
+}
+
+.text-box {
+    color: var(--text-black-900);
+}
+
+
+.text-box h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-family: "Comfortaa", sans-serif;
+
+}
+
+hr {
+    border: none;
+    border-top: 2px dashed var(--text-black-900); /* O cualquier otro color que prefieras */
+    margin: 20px 0; /* Espacio alrededor de la línea */
+}
+
+.text-box p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+}
