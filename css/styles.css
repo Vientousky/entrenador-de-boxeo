@@ -4,7 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,12 +13,18 @@ html {
 }
 
 :root {
-    --bg--black--900: #18171f; /* Fondo oscuro */
-    --bg--black--100: #23222e; /* Fondo más oscuro */
-    --bg--black--50: #2f2d3a;  /* Fondo aún más oscuro */
-    --text-black-900: #f0f0ff;  /* Texto claro */
-    --text-black-700: #ccccee;  /* Texto menos claro */
-    --skin--color-red: #d62326; /* Rojo con un tono más intenso */
+    --bg--black--900: #18171f;
+    /* Fondo oscuro */
+    --bg--black--100: #23222e;
+    /* Fondo más oscuro */
+    --bg--black--50: #2f2d3a;
+    /* Fondo aún más oscuro */
+    --text-black-900: #f0f0ff;
+    /* Texto claro */
+    --text-black-700: #ccccee;
+    /* Texto menos claro */
+    --skin--color-red: #d62326;
+    /* Rojo con un tono más intenso */
 }
 
 body {
@@ -49,7 +55,7 @@ body {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     font-size: 25px;
     color: var(--text-black-900);
     text-transform: uppercase;
@@ -71,7 +77,8 @@ body {
 
 .menu .navbar ul li a:hover,
 .menu .navbar ul li a:active {
-    color: var(--skin--color-red); /* Cambiar a color de hover */
+    color: var(--skin--color-red);
+    /* Cambiar a color de hover */
 }
 
 #menu {
@@ -85,11 +92,11 @@ body {
 .menu label {
     cursor: pointer;
     display: none;
-     
+
 }
 
 @media (max-width:991px) {
-   
+
     .content {
         min-height: 70px;
     }
@@ -121,10 +128,11 @@ body {
         text-align: center;
         width: 99%;
     }
-    
-    #menu:checked ~ .navbar {
+
+    #menu:checked~.navbar {
         z-index: 2;
-        max-height: 500px; /* Ajusta según la altura del contenido */
+        max-height: 500px;
+        /* Ajusta según la altura del contenido */
         opacity: 1;
         visibility: visible;
     }
@@ -144,8 +152,8 @@ body {
     height: 92.5vh;
 }
 
-.background-video{
-    
+.background-video {
+
     position: relative;
     top: 0;
     left: 0;
@@ -188,8 +196,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #e8e8fa; 
-    transform: scale(1.05); 
+    background-color: #e8e8fa;
+    transform: scale(1.05);
 }
 
 .btn a {
@@ -236,8 +244,10 @@ body {
 
 .text-box hr {
     border: none;
-    border-top: 2px dashed var(--text-black-900); /* O cualquier otro color que prefieras */
-    margin: 20px 0; /* Espacio alrededor de la línea */
+    border-top: 2px dashed var(--text-black-900);
+    /* O cualquier otro color que prefieras */
+    margin: 20px 0;
+    /* Espacio alrededor de la línea */
 }
 
 .text-box p {
@@ -247,7 +257,7 @@ body {
 /* Servicios */
 
 .Servicios {
-    height: 100vh;
+    height: auto;
     width: 100%;
 }
 
@@ -261,7 +271,7 @@ body {
 .text h2 {
     padding: 25px;
     font-size: 50px;
-   
+
 }
 
 
@@ -285,7 +295,7 @@ body {
 .sub-card {
     background: var(--text-black-900);
     border-radius: 25px;
-    
+
 }
 
 
@@ -293,12 +303,12 @@ body {
     margin: 20px;
 }
 
-.sub-card p  {
+.sub-card p {
     color: var(--bg--black--100);
     text-align: center;
     font-size: 20px;
     padding: 10px 10px 12px 10px;
-    
+
 }
 
 .sub-card h2 {
@@ -317,11 +327,173 @@ body {
 .info {
     position: relative;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
     color: var(--text-black-900);
 }
 
 .info h2 {
     font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.info h3 {
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.info p {
+    font-size: 20px;
+}
+
+.info-card {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+.icon {
+    color: var(--skin--color-red);
+    font-size: 25px;
     margin-bottom: 20px;
+}
+
+.card1 h4 {
+    font-size: 18px;
+    color: var(--text-black-900);
+    margin-bottom: 23px;
+}
+
+.card1 p {
+    font-size: 16px;
+    color: var(--text-black-900);
+}
+
+/* Contac */
+
+.contact-content {
+    width: 60%;
+    padding: 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-content {
+    flex: 1 1 45%;
+}
+
+.map-content {
+    flex: 1 1 45%;
+    height: 350px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-input, 
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: var(--text-black-900);
+    background: var(--bg--black--50);
+    outline: none;
+    transition: border-color 0.3s;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.form-input:focus, 
+.form-textarea:focus {
+    border-color: #007bff;
+}
+
+.form-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--text-black-900);
+    transition: top 0.3s, font-size 0.3s, color 0.3s;
+    pointer-events: none;
+}
+
+.form-input:not(:placeholder-shown) + .form-text,
+.form-input:focus + .form-text {
+    top: -10px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.btn-1 {
+    display: flex;
+    width: 99%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: var(--text-black-700);
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-1:hover {
+    background-color: #0056b3;
+}
+
+
+textarea {
+    font-weight: c;
+}
+
+@media (max-width: 768px) {
+
+    .info-card{
+        grid-template-columns:  repeat(2, 1fr);
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .card-container {
+        width: 80%;
+        grid-template-columns:  repeat(2, 1fr); /* Una sola columna para pantallas muy pequeñas */
+    }
+
+    .map-content {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        width: 100%;
+        grid-template-columns: 1fr; /* Una sola columna para pantallas muy pequeñas */
+    }
+
+    .contact-content {
+        width: 90%; /* Más margen para pantallas muy pequeñas */
+    }
+
+    .btn-1 {
+        width: 100%; /* Botón a lo ancho completo */
+    }
 }
