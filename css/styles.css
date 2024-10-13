@@ -311,9 +311,13 @@ body {
 .sub-card {
     background: var(--text-black-900);
     border-radius: 25px;
+    transition: 0.3s;
 
 }
 
+.sub-card:hover{
+    transform: scale(1.05);
+}
 
 .sub-card hr {
     margin: 20px;
@@ -339,6 +343,7 @@ body {
 .contacto {
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
 }
 
 .info {
